@@ -1,0 +1,70 @@
+// Ex. 1 créer des variables
+
+$darkcolor : rgb(97, 93, 93);
+$lightcolor: rgb(133, 189, 207);
+$funky: rgb(238, 159, 40);
+
+h1{
+    color: $darkcolor;
+}
+
+h3 {
+    background: $lightcolor;
+}
+.corps{
+    background-color: $funky;
+}
+
+// Ex 2
+@mixin Cool {
+    font-size: 25px;
+    font-family: cursive;
+    color: rgb(46, 26, 224);
+}
+
+h3{
+    @include Cool;
+}
+
+@mixin serious {
+    font-size: 20px;
+    font-family: monospace;
+    color: crimson;
+}
+
+p{
+    @include serious;
+}
+
+// Ex 3 nesting color and text decoration
+div{
+    li{
+        color:darkmagenta;
+        background-color: peachpuff;
+        text-decoration: underline;
+        line-height: 35px;
+    }
+}
+
+
+// Ex 4
+.body{
+    border: 1px solid black;
+    background-color: rgb(49, 214, 27);
+}
+.body--extend{
+    @extend .body;
+    text-decoration: underline;
+}
+
+
+
+// Ex 5 nesting hover, color and text decoration
+div{
+    li:hover{
+        color:darkmagenta;
+        background-color: red;
+        text-decoration: underline;
+        line-height: 35px;
+    }
+}
